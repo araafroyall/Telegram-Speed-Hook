@@ -1,4 +1,4 @@
-# Telegram-Speed-Hook
+# Telegram Speed Hook
 An Xposed Module to Increase Telegram Speed to Extreme
 
 
