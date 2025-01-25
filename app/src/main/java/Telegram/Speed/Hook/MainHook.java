@@ -37,7 +37,7 @@ public class MainHook implements IXposedHookLoadPackage {
 
                         try {
                             var fileSize = XposedHelpers.getLongField(param.thisObject, "totalBytesCount");
-                            if (fileSize > 15 * 1024 * 1024 && System.currentTimeMillis() - speedUpShown > 1000 * 60 * 5) {
+                            if (fileSize > 5 * 1024 * 1024 && System.currentTimeMillis() - speedUpShown > 1000 * 60 * 2) {
                                 speedUpShown = System.currentTimeMillis();
                                 var title = "Speed Boost Activated";
                                 var subtitle = "Extreme Speed Mode Enabled by AraafRoyall";
