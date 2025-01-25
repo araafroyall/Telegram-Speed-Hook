@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=""https://github.com/araafroyall/ Telegram-Speed-Hook/raw/main/TgSpeedHook.png" style="width: 30%;" />
+  <img src=""https://github.com/araafroyall/ Telegram-Speed-Hook/raw/main/images/TgSpeedHook.png" style="width: 30%;" />
 </p>
 
 # Telegram-Speed-Hook
