@@ -7,3 +7,9 @@ An Xposed Module to Increase Telegram Speed to Extreme
 </p>
 
 Created by : @AraafRoyall
+
+Telegram Username : @AraafRoyall 
+
+Thanks for using the Module ..
+
+Feel free to contact, ask, help, discuss about the module
