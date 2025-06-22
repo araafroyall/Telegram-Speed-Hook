@@ -13,18 +13,21 @@ import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 
 public class MainHook implements IXposedHookLoadPackage {
+     
+     // Modified by Araaf Royall
+     
     private final static long DEFAULT_MAX_FILE_SIZE = 1024L * 1024L * 2000L;
     private static long speedUpShown = 0;
 
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam loadPackageParam) {
-        
+
         if ("org.telegram.messenger".equals(loadPackageParam.packageName)) {
             try {
                 XposedHelpers.findAndHookMethod("org.telegram.messenger.FileLoadOperation", loadPackageParam.classLoader, "updateParams", new XC_MethodHook() {
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
-                        
+
                         int downloadChunkSizeBig = 1024 * 1024;
                         int maxDownloadRequests = 12;
                         int maxDownloadRequestsBig = 12;
@@ -40,7 +43,7 @@ public class MainHook implements IXposedHookLoadPackage {
                             if (fileSize > 5 * 1024 * 1024 && System.currentTimeMillis() - speedUpShown > 1000 * 60 * 2) {
                                 speedUpShown = System.currentTimeMillis();
                                 var title = "Speed Boost Activated";
-                                var subtitle = "Extreme Speed Mode Enabled by AraafRoyall";
+                                var subtitle = "Extreme Speed Mode Enabled by Araaf Royall";
                                 try {
                                     var notificationCenterClass = XposedHelpers.findClass("org.telegram.messenger.NotificationCenter", loadPackageParam.classLoader);
                                     var globalInstance = XposedHelpers.callStaticMethod(notificationCenterClass, "getGlobalInstance");
@@ -64,7 +67,7 @@ public class MainHook implements IXposedHookLoadPackage {
                 XposedHelpers.findAndHookMethod(Activity.class, "onResume", new XC_MethodHook() {
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) {
-                        Toast.makeText((Activity) param.thisObject, "TeleSpeed: Unsupported Feature", Toast.LENGTH_LONG).show();
+                        Toast.makeText((Activity) param.thisObject, "Tg Speed Hook : Unsupported Feature", Toast.LENGTH_LONG).show();
                     }
                 });
             }
