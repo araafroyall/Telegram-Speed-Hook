@@ -4,9 +4,8 @@
 	package="Telegram.Speed.Hook">
 	<application
 		android:allowBackup="true"
-		android:icon="@mipmap/ic_launcher"
+		android:icon="@drawable/app_icon"
 		android:label="@string/app_name"
-		android:requestLegacyExternalStorage="true"
 		android:theme="@style/AppTheme">
 		<activity
 			android:name=".MainActivity"
@@ -22,8 +21,7 @@
 		</activity>
 		<activity
 			android:name=".DebugActivity"
-			android:screenOrientation="portrait"
-			android:theme="@style/AppTheme.DebugActivity" />
+			android:screenOrientation="portrait" />
 <meta-data
     android:name="xposedmodule"
     android:value="true" />
@@ -32,7 +30,7 @@
     android:value="Increase Telegram Download Speed to Extreme" />
 <meta-data
     android:name="xposedminversion"
-    android:value="30" />
+    android:value="82" />
 <meta-data
     android:name="xposedscope"
     android:value="org.telegram.messenger" />
