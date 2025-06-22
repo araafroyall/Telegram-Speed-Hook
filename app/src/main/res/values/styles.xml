@@ -23,5 +23,4 @@
 	<style name="NoStatusBar" parent="AppTheme">
 		<item name="android:windowFullscreen">true</item>
 	</style>
-	<style name="AppTheme.DebugActivity" parent="AppTheme" />
 </resources>
